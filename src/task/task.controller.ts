@@ -40,7 +40,7 @@ export class TaskController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id', ParseMongoPipe) id: string) {
     return this.taskService.remove(id);
   }
 }
